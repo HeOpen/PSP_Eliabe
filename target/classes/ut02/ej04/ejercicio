@@ -1,0 +1,29 @@
+Crear dos programas:
+ Productor, que se hará en una clase “Productor.java”.
+ Consumidor, que se hará en una clase “Consumidor.java”.
+El programa “Productor”:
+ Ejecutará un bucle 20 veces. Cada iteración del bucle:
+o Abre un fichero de texto “mensajes.txt”, para añadir contenido:
+o Escribe fecha y hora, sin salto de línea y vacía el buffer (llamar a
+flush)
+o Se duerme un pequeño espacio de tiempo.
+o Escribe el número de iteración en el que se encuentra, con salto de
+línea, y vacía el buffer (llamar a flush).
+o Cierra el fichero
+ Al terminar las 20 veces, escribirá una línea final, con la palabra “FIN”.
+El programa “Consumidor”:
+ Ejecutará un bucle infinito, y en cada iteración:
+o Abrirá el fichero “mensajes.txt”, para leer de él.
+o Leerá la última línea del fichero.
+o Si la línea leída no es “FIN”, la muestra por consola, y se duerme un
+pequeño periodo de tiempo.
+o Cierra el fichero.
+o Si la línea leída es “FIN”, sale del bucle. No usar break. Usar un
+valor lógico (flag) para “romper” el bucle, y el programa termina.
+En estos programas los accesos al fichero no se sincronizan. Jugando con los
+tiempos de “sueño” de cada proceso, debemos poder conseguir que el proceso
+“Consumidor” lea líneas incompletas del fichero, en las que aparezca solo la
+fecha, pero no el número de iteración.
+Lanzar los dos procesos desde una ventana CMD, o a la vez en IntelliJ, para
+probarlos. Quizá sea útil aumentar el número de iteraciones del productor para
+las pruebas, para conseguir ver los resultados esperados.
