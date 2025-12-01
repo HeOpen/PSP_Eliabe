@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Consumidor {
 
-    public static String INPUT = "/home/eliabe/IdeaProjects/PSP_Eliabe/files/mensajes.txt";
+    public static String INPUT = "mensajes_ut02_04.txt";
     public static long SLEEP_TIME = 3000;
 
     static void main() {

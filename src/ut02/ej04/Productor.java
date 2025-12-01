@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 public class Productor {
 
-    public static String OUTPUT = "mensajes.txt";
+    public static String OUTPUT = "mensajes_ut02_04.txt";
     public static long SLEEP_TIME = 1000;
 
     static void main() {
